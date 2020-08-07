@@ -18,8 +18,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route component={NoMatch} />
+        <Route exact path="/" component={} />
+        <Route  />
       </Switch>
     </Router>
   );
