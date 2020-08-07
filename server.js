@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const routes= require ("./routes")
 
 const app = express();
 
@@ -11,15 +12,16 @@ app.use(express.json());
 
 app.use(express.static("client/build"));
 
-app.get("/api/config", (req, res) => {
-  res.json({
-    success: true,
-  });
-});
+// app.get("/api/config", (req, res) => {
+//   res.json({
+//     success: true,
+//   });
+// });
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+app.use(routes)
 
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/google-books-search", {
