@@ -1,5 +1,5 @@
 {
-  "name": "google books search",
+  "name": "google-books-search",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanjwatson/mern-starter.git"
+    "url": "git+https://github.com/volodya1989/google-books-search.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Volodymyr Petrytsya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jonathanjwatson/mern-starter/issues"
+    "url": "https://github.com/volodya1989/google-books-search/issues"
   },
-  "homepage": "https://github.com/jonathanjwatson/mern-starter#readme",
+  "homepage": "https://github.com/volodya1989/google-books-search#readme",
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4",
