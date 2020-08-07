@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Search from "../components/Search/Search";
 import SearchResults from "../components/Search/SearchResults";
-
+import API from "../utils/API";
 
 class searchBooks extends Component {
   state = {
@@ -12,11 +12,15 @@ class searchBooks extends Component {
     this.setState({ search: e.target.value });
   };
   handleSearchSubmit = (e) => {
-    e.preventDefault;
-    API.getBook(this.state.search).then(response=>{
-        console.log(response.data.items)
-        this.setState({search:response.data.items})
-    })
+    e.preventDefault();
+    API.getBook(this.state.search)
+      .then((response) => {
+        console.log(response);
+        this.setState({ search: response});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   render() {
