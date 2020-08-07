@@ -1,19 +1,18 @@
 import React from "react";
 
-const SearchResults = ({ title, author, description, image, link, date }) => {
+const SearchResults = (props) => {
   return (
     <div>
       <ul>
-        <li>title:{title}</li>
-        <li>author:{author}</li>
-        <li>descr:{description}</li>
+        <li>title:{props.title}</li>
+        <li>author:{props.authors}</li>
+        <li>descr:{props.description}</li>
         <li>
           image:
-          <img src={image} alt={title} />
+          <img src={props.imageLinks} alt={props.title} />
         </li>
-        <li>link:{link}</li>
+        <li>link:{props.infoLink}</li>
 
-        <li>date:{date}</li>
       </ul>{" "}
     </div>
   );

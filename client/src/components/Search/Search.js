@@ -12,10 +12,10 @@ const Search = (props) => {
                     type="text"
                     name=""
                     placeholder=""
-                    onChange=""
+                    onChange={props.handleSearchChange}
                 />
             </div>
-            <button type="submit" className=" btn btn-primary" onClick="">
+            <button type="submit" className=" btn btn-primary" onClick={props.handleSearchSubmit}>
                 Submit
             </button>
         </form>

@@ -6,7 +6,7 @@ import API from "../utils/API";
 class searchBooks extends Component {
   state = {
     search: "",
-    saved: [],
+    books: [],
   };
   handleInputChange = (e) => {
     this.setState({ search: e.target.value });
@@ -14,10 +14,11 @@ class searchBooks extends Component {
   handleSearchSubmit = (e) => {
     e.preventDefault();
     API.getBook(this.state.search)
-      .then((response) => {
-        console.log(response);
-        this.setState({ search: response});
-      })
+    .then(res => {
+        console.log(res)
+        this.setState({ books: res.data.items })
+
+    })
       .catch((err) => {
         console.log(err);
       });
@@ -30,7 +31,7 @@ class searchBooks extends Component {
           handleInputChange={this.handleInputChange}
           handleSearchSubmit={this.handleSearchSubmit}
         />
-        <SearchResults books={this.state.search} />
+        <SearchResults books={this.state.books} />
       </div>
     );
   }
