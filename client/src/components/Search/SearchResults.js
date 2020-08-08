@@ -3,17 +3,31 @@ import React from "react";
 const SearchResults = (props) => {
   return (
     <div>
-      <ul>
-        <li>title:{props.title}</li>
-        <li>author:{props.authors}</li>
-        <li>descr:{props.description}</li>
-        <li>
-          image:
-          <img src={props.imageLinks} alt={props.title} />
-        </li>
-        <li>link:{props.infoLink}</li>
-
-      </ul>{" "}
+      {props.books.map((book) => {
+        return (
+          <div key={book.id}>
+            <ul>
+              <li>title:{book.volumeInfo.title}</li>
+              <li>author:{book.volumeInfo.authors}</li>
+              <li>descr:{book.volumeInfo.description}</li>
+              <li>
+                image:
+                <img
+                  src={book.volumeInfo.imageLinks.thumbnail}
+                  alt={book.volumeInfo.title}
+                />
+              </li>
+              <li>
+                Whant more details about the book?
+                <a href={book.volumeInfo.infoLink}> Click here</a>
+              </li>
+              <li>
+                =================================================================
+              </li>
+            </ul>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -9,6 +9,7 @@ class searchBooks extends Component {
     books: [],
   };
   handleInputChange = (e) => {
+    console.log(e.target.value)
     this.setState({ search: e.target.value });
   };
   handleSearchSubmit = (e) => {
