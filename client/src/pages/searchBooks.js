@@ -24,6 +24,10 @@ class searchBooks extends Component {
         console.log(err);
       });
   };
+  handleSaveBook = (e) => {
+    e.preventDefault();
+    //use filter to save book into new array of saved books
+  };
 
   render() {
     return (
@@ -32,7 +36,7 @@ class searchBooks extends Component {
           handleInputChange={this.handleInputChange}
           handleSearchSubmit={this.handleSearchSubmit}
         />
-        <SearchResults books={this.state.books} />
+        <SearchResults books={this.state.books}  />
       </div>
     );
   }
