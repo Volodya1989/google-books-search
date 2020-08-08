@@ -6,6 +6,7 @@ const SearchResults = (props) => {
       {props.books.map((book) => {
         return (
           <div key={book.id}>
+            <form>
             <ul>
               <li>title:{book.volumeInfo.title}</li>
               <li>author:{book.volumeInfo.authors}</li>
@@ -25,6 +26,8 @@ const SearchResults = (props) => {
                 =================================================================
               </li>
             </ul>
+            </form>
+            <button type="submit" id={book.id} onClick={ (e)=>props.handleSaveBook(e)}>Save Book</button>
           </div>
         );
       })}

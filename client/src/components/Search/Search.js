@@ -10,8 +10,8 @@ const Search = (props) => {
                 <input className="col-12 "
                     value={props.search}
                     type="text"
-                    name=""
-                    placeholder=""
+                    name="books"
+                    placeholder="search for books here"
                     onChange={props.handleInputChange}
                 />
             </div>
