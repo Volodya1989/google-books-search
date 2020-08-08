@@ -1,15 +1,18 @@
 import React from "react";
 // import axios from "axios";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import searchBooks from "./pages/searchBooks";
+import savedBooks from "./pages/savedBooks";
+
 
 function App() {
-  
   return (
     <Router>
+      <Switch>
         <Route exact path="/" component={searchBooks} />
-        <Route  />
+        <Route exact path="/savedBooks" component={savedBooks} />
+      </Switch>
     </Router>
   );
 }

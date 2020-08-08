@@ -6,14 +6,14 @@ export default {
   getBooks: (query) => {
     return axios.get(`${URL}${query}`);
   },
-  //Should return all saved books as JSON
+  //Should return all saved books 
   getAllBooks: () => {
     return axios.get("/api/books");
   },
 
 //  Will be used to save a new book to the database.
-saveOneBook: (book) => {
-  return axios.post("/api/books",book);
+saveOneBook: (svBooks) => {
+  return axios.post("/api/books",svBooks);
 },
   //  Will be used to get a single book.
 getBookById: (id) => {

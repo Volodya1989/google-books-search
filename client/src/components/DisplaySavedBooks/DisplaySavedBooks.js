@@ -3,7 +3,8 @@ import React from 'react';
 const DisplaySavedBooks = (props) => {
    return (
     <div>
-      {props.books.map((book) => {
+        <h1>Saved Books are displayed here</h1>
+      {/* {props.books.map((book) => {
         return (
           <div key={book.id}>
             <ul>
@@ -27,7 +28,7 @@ const DisplaySavedBooks = (props) => {
             </ul>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };
