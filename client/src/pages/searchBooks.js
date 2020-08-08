@@ -13,9 +13,9 @@ class searchBooks extends Component {
   };
   handleSearchSubmit = (e) => {
     e.preventDefault();
-    API.getBook(this.state.search)
+    API.getBooks(this.state.search)
     .then(res => {
-        console.log(res)
+        console.log(res.data.items )
         this.setState({ books: res.data.items })
 
     })
