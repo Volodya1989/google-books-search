@@ -10,15 +10,16 @@ export default {
   getAllBooks: () => {
     return axios.get("/api/books");
   },
+
+//  Will be used to save a new book to the database.
+saveOneBook: (book) => {
+  return axios.post("/api/books",book);
+},
   //  Will be used to get a single book.
-saveBook: (id) => {
+getBookById: (id) => {
   return axios.get(`/api/books${id}`);
 },
 
-//  Will be used to save a new book to the database.
-saveBook: (bookToSave) => {
-  return axios.post("/api/books",bookToSave);
-},
 
 //Will be used to delete a book from the database by Mongo `_id`.
 deleteBook: (id) => {

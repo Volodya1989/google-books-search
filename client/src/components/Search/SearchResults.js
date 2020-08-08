@@ -27,7 +27,7 @@ const SearchResults = (props) => {
               </li>
             </ul>
             </form>
-            <button type="submit">Save Book</button>
+            <button type="submit" id={book.id} onClick={ (e)=>props.handleSaveBook(e)}>Save Book</button>
           </div>
         );
       })}
