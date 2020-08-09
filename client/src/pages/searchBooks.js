@@ -18,7 +18,27 @@ class searchBooks extends Component {
     API.getBooks(this.state.search)
       .then((res) => {
         console.log(res.data.items);
-        this.setState({ books: res.data.items });
+        // store response as array
+        let data = res.data.items;
+        if (data === "error") {
+          throw new Error(data);
+        } else {
+          //map through the array
+          data = data.map((result) => {
+            //store  book's info as object
+            result = {
+              key: result.id,
+              id: result.id,
+              title: result.volumeInfo.title,
+              authors: result.volumeInfo.authors,
+              description: result.volumeInfo.description,
+              image: result.volumeInfo.imageLinks.thumbnail,
+              link: result.volumeInfo.infoLink,
+            };
+            return result;
+          });
+          this.setState({ books: data });
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -28,9 +48,9 @@ class searchBooks extends Component {
     e.preventDefault();
     const arrayOfBooks = this.state.books;
     //use filter to save book into new array of saved books
-    let svBooks = arrayOfBooks.filter((book) => book.id === e.target.id);
-    console.log(svBooks);
-    svBooks = svBooks[0];
+    const filteredArray = arrayOfBooks.filter((book) => book.id === e.target.id);
+    console.log(filteredArray);
+    const svBooks = filteredArray[0];
     console.log(svBooks);
 
     API.saveOneBook(svBooks)
