@@ -22,8 +22,8 @@ class savedBooks extends Component {
   render() {
     return (
       <div>
-        <DisplaySavedBooks svBooks={this.state.svBooks} />
-      {/* {this.state.svBooks.map((book) => (
+        {/* <DisplaySavedBooks svBooks={this.state.svBooks} /> */}
+      {this.state.svBooks.map((book) => (
         
           <div key={book.id}>
             <ul>
@@ -47,7 +47,7 @@ class savedBooks extends Component {
             </ul>
           </div>
       
-      ))} */}
+      ))}
       </div>
     );
   }
