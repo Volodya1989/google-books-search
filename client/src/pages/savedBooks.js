@@ -10,9 +10,9 @@ class savedBooks extends Component {
   componentDidMount() {
     API.getAllBooks()
     .then((res) => {
-      const books = res.data;
-      console.log(books);
-      this.setState({ svBooks: books });
+       
+      console.log("May book - "+res.data);
+      this.setState({ svBooks: res.data });
     })
     .catch((err) => console.log(err));  }
 
@@ -22,10 +22,9 @@ class savedBooks extends Component {
   render() {
     return (
       <div>
-        {/* <DisplaySavedBooks svBooks={this.state.svBooks} /> */}
-        <h1>Saved Books are displayed here</h1>
-      {this.state.books.map((book) => {
-        return(
+        <DisplaySavedBooks svBooks={this.state.svBooks} />
+      {/* {this.state.svBooks.map((book) => (
+        
           <div key={book.id}>
             <ul>
               <li>title:{book.title}</li>
@@ -47,8 +46,8 @@ class savedBooks extends Component {
               </li>
             </ul>
           </div>
-       )
-      })}
+      
+      ))} */}
       </div>
     );
   }

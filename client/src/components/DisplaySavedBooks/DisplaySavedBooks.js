@@ -4,7 +4,7 @@ const DisplaySavedBooks = (props) => {
    return (
     <div>
         <h1>Saved Books are displayed here</h1>
-      {/* {props.books.map((book) => {
+      {props.books.map((book) => {
         return (
           <div key={book.id}>
             <ul>
@@ -28,7 +28,7 @@ const DisplaySavedBooks = (props) => {
             </ul>
           </div>
         );
-      })} */}
+      })}
     </div>
   );
 };
