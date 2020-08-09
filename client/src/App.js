@@ -4,14 +4,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import searchBooks from "./pages/searchBooks";
 import savedBooks from "./pages/savedBooks";
+import Nav from "../src/components/Nav/index";
+
 
 
 function App() {
   return (
     <Router>
+              <Nav />
+
       <Switch>
         <Route exact path="/" component={searchBooks} />
-        <Route exact path="/savedBooks" component={savedBooks} />
+        <Route exact path="/saved" component={savedBooks} />
       </Switch>
     </Router>
   );
