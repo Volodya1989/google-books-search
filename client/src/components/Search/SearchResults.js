@@ -8,19 +8,19 @@ const SearchResults = (props) => {
           <div key={book.id}>
             <form>
             <ul>
-              <li>title:{book.volumeInfo.title}</li>
-              <li>author:{book.volumeInfo.authors}</li>
-              <li>descr:{book.volumeInfo.description}</li>
+              <li>title:{book.title}</li>
+              <li>author:{book.authors}</li>
+              <li>description:{book.description}</li>
               <li>
                 image:
                 <img
-                  src={book.volumeInfo.imageLinks.thumbnail}
-                  alt={book.volumeInfo.title}
+                  src={book.image}
+                  alt={book.title}
                 />
               </li>
               <li>
                 Whant more details about the book?
-                <a href={book.volumeInfo.infoLink}> Click here</a>
+                <a href={book.link}> Click here</a>
               </li>
               <li>
                 =================================================================

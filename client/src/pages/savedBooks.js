@@ -9,23 +9,25 @@ class savedBooks extends Component {
 
   componentDidMount() {
     API.getAllBooks()
-    .then((res) => {
-       
-      console.log("May book - "+res.data);
-      this.setState({ svBooks: res.data });
-    })
-    .catch((err) => console.log(err));  }
+      .then((res) => {
+        console.log("May book - " + JSON.stringify(res.data));
+        this.setState({ svBooks: res.data });
+        console.log(this.state.svBooks);
+      })
+      .catch((err) => console.log(err));
+  }
 
   // loadBooks() {
-    
+
   // }
   render() {
     return (
       <div>
-        {/* <DisplaySavedBooks svBooks={this.state.svBooks} /> */}
-      {this.state.svBooks.map((book) => (
-        
-          <div key={book.id}>
+        <DisplaySavedBooks svBooks={this.state.svBooks} />
+        {/* {this.state.svBooks.map((book) => {
+          return( 
+            <div key={book.id}>
+            <form>
             <ul>
               <li>title:{book.title}</li>
               <li>author:{book.authors}</li>
@@ -33,21 +35,22 @@ class savedBooks extends Component {
               <li>
                 image:
                 <img
-                  src={book.thumbnail}
+                  src={book.image}
                   alt={book.title}
                 />
               </li>
               <li>
                 Whant more details about the book?
-                <a href={book.infoLink}> Click here</a>
+                <a href={book.link}> Click here</a>
               </li>
               <li>
                 =================================================================
               </li>
             </ul>
+            </form>
           </div>
-      
-      ))}
+         );
+        })} */}
       </div>
     );
   }
