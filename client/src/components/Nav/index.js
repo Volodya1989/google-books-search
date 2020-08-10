@@ -30,7 +30,7 @@ class Nav extends Component {
       >
         <div className="container">
           <Link className="navbar-brand" to="/">
-           Find Book
+            Google Books Search{" "}
           </Link>
 
           <button
@@ -48,25 +48,19 @@ class Nav extends Component {
           <div className={`${classOne}`} id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item ">
-               
-                <Link
-                  className="nav-link"
-                  onClick={this.toggleNavbar}
-                  to="/"
-                >
+                <Link className="nav-link" onClick={this.toggleNavbar} to="/">
                   Search
                 </Link>
               </li>
               <li className="nav-item ">
-              
                 <Link
                   className="nav-link"
                   onClick={this.toggleNavbar}
-                  to="/savedBooks"                >
+                  to="/savedBooks"
+                >
                   Saved Books
                 </Link>
               </li>
-             
             </ul>
           </div>
         </div>
@@ -75,9 +69,7 @@ class Nav extends Component {
   }
 }
 
-
 export default Nav;
-
 
 // import React from "react";
 // import { Link } from "react-router-dom";
