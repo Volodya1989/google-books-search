@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DisplaySavedBooks from "../components/DisplaySavedBooks/DisplaySavedBooks";
 import API from "../utils/API";
+import "./pages.style.css";
 
 class savedBooks extends Component {
   state = {
@@ -15,17 +16,22 @@ class savedBooks extends Component {
       .catch((err) => console.log(err));
   }
 
-
   handleDelete(id) {
     API.deleteBook(id)
-      .then((_) => this.componentDidMount())
+      .then((_) => {
+        this.componentDidMount(); window.location.reload();
+      })
       .catch((err) => console.log(err));
   }
   render() {
     return (
-      <div>
-        <DisplaySavedBooks svBooks={this.state.svBooks} handleDelete={this.handleDelete} />
-      
+      <div id="savedPage">
+        <div className="container">
+          <DisplaySavedBooks
+            svBooks={this.state.svBooks}
+            handleDelete={this.handleDelete}
+          />
+        </div>
       </div>
     );
   }

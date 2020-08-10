@@ -1,20 +1,21 @@
 import React from "react";
+import "./search.style.css";
 
 const SearchResults = (props) => {
   return (props.books.length === 0) ? (
-    <div>
+    <div className="container">
       
-      <h1 className="text-center">Welcome to our page!</h1> 
+      <h3 className="text-center welcome">Welcome to our page!</h3> 
         
       </div>) :(<div>
-      <h2>Your Search Results</h2>
+      <h2 id="yourSearch">Your Search Results</h2>
       {props.books.map((book) => {
         return (
           
-          <div key={book.id}>
+          <div key={book.id} className="container">
             <div className="card-body">
               <ul className="list-group">
-                <li className="list-group-item">
+                <li className="list-group-item searchCards">
                   <div className="book-list__header row">
                     <div className="col-md-8">
                       <h3 className="book__title">{book.title}</h3>
@@ -42,16 +43,16 @@ const SearchResults = (props) => {
                       </p>
                     </div>
                   </div>
-                  <div className="btn-container">
+                  <div className="btn-container ">
                     <button
-                      className="btn btn-primary"
+                      className="btn btn-primary specialBtn"
                       type="submit"
                       id={book.id}
                       onClick={(e) => props.handleSaveBook(e)}
                     >
                       Save Book
                     </button>
-                    <button className="btn btn-success" id={book.id}>
+                    <button className="btn btn-success specialBtn" id={book.id}>
                       <a href={book.link} target="_blank">
                         View Book
                       </a>

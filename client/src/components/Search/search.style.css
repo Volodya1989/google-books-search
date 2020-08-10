@@ -1,0 +1,29 @@
+#searchField  {
+  border-radius: 10px;
+  max-width: 30%;
+  height: 40px;
+}
+#searchButton{
+    border-radius: 20px;
+    /* margin-left: 20px; */
+    width: 60px;
+
+}
+.title{
+    text-align: center;
+    color: white;
+    background-color: rgba(202, 181, 142, 0.767);
+}
+.searchCards{
+    opacity: 0.9;;
+}
+#yourSearch{
+    text-align: center;
+}
+.specialBtn{
+    margin-left: 10px;
+}
+.welcome{
+    text-align: center;
+    background-color: rgba(202, 181, 142, 0.767);
+}
