@@ -10,9 +10,7 @@ class savedBooks extends Component {
   componentDidMount() {
     API.getAllBooks()
       .then((res) => {
-        console.log("May book - " + JSON.stringify(res.data));
         this.setState({ svBooks: res.data });
-        console.log(this.state.svBooks);
       })
       .catch((err) => console.log(err));
   }
@@ -20,7 +18,7 @@ class savedBooks extends Component {
 
   handleDelete(id) {
     API.deleteBook(id)
-      .then((res) => this.componentDidMount())
+      .then((_) => this.componentDidMount())
       .catch((err) => console.log(err));
   }
   render() {

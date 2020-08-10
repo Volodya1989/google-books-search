@@ -19,10 +19,7 @@ const DisplaySavedBooks = (props) => {
                   alt={book.title}
                 />
               </li>
-              <li>
-                Whant more details about the book?
-                <a href={book.link}> Click here</a>
-              </li>
+              
               <li>
                 =================================================================
               </li>
