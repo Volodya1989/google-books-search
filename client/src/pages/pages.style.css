@@ -1,0 +1,10 @@
+#searchPage{
+    background-image: url(../images/background_search.jpg);
+    background-attachment: fixed;
+    background-position: center ;
+}
+#savedPage{
+    background-image: url(../images/savedPageBackground.jpg);
+    background-attachment: fixed;
+    background-position: center ;
+}

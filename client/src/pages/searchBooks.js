@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Search from "../components/Search/Search";
 import SearchResults from "../components/Search/SearchResults";
 import API from "../utils/API";
+import "./pages.style.css";
+
 
 class searchBooks extends Component {
   state = {
@@ -62,7 +64,7 @@ class searchBooks extends Component {
 
   render() {
     return (
-      <div>
+      <div id="searchPage">
         <Search
           handleInputChange={this.handleInputChange}
           handleSearchSubmit={this.handleSearchSubmit}
@@ -71,6 +73,7 @@ class searchBooks extends Component {
           books={this.state.books}
           handleSaveBook={this.handleSaveBook}
         />
+        
       </div>
     );
   }

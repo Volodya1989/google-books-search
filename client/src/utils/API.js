@@ -17,12 +17,12 @@ saveOneBook: (svBooks) => {
 },
   //  Will be used to get a single book.
 getBookById: (id) => {
-  return axios.get(`/api/books${id}`);
+  return axios.get(`/api/books/${id}`);
 },
 
 
 //Will be used to delete a book from the database by Mongo `_id`.
 deleteBook: (id) => {
-  return axios.delete(`/api/books${id}`);
+  return axios.delete(`/api/books/${id}`);
 },
 };
