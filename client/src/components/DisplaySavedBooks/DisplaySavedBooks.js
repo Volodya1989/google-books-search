@@ -6,7 +6,7 @@ const DisplaySavedBooks = (props) => {
         <h1>Saved Books are displayed here</h1>
       {props.svBooks.map((book) => {
           return( 
-            <div key={book.id}>
+            <div key={book._id}>
             <form>
             <ul>
               <li>title:{book.title}</li>
@@ -28,6 +28,16 @@ const DisplaySavedBooks = (props) => {
               </li>
             </ul>
             </form>
+            <button
+                  className="btn btn-danger"
+                  id={book._id}
+                  onClick={()=>props.handleDelete(book._id)}
+                >
+                  Delete Book
+                </button>
+                <button className="btn btn-success" type="link" >
+                  <a href={book.link} target="_blank"> View Book</a>
+                </button>
           </div>
          );
         })}

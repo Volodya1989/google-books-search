@@ -17,40 +17,17 @@ class savedBooks extends Component {
       .catch((err) => console.log(err));
   }
 
-  // loadBooks() {
 
-  // }
+  handleDelete(id) {
+    API.deleteBook(id)
+      .then((res) => this.componentDidMount())
+      .catch((err) => console.log(err));
+  }
   render() {
     return (
       <div>
-        <DisplaySavedBooks svBooks={this.state.svBooks} />
-        {/* {this.state.svBooks.map((book) => {
-          return( 
-            <div key={book.id}>
-            <form>
-            <ul>
-              <li>title:{book.title}</li>
-              <li>author:{book.authors}</li>
-              <li>descr:{book.description}</li>
-              <li>
-                image:
-                <img
-                  src={book.image}
-                  alt={book.title}
-                />
-              </li>
-              <li>
-                Whant more details about the book?
-                <a href={book.link}> Click here</a>
-              </li>
-              <li>
-                =================================================================
-              </li>
-            </ul>
-            </form>
-          </div>
-         );
-        })} */}
+        <DisplaySavedBooks svBooks={this.state.svBooks} handleDelete={this.handleDelete} />
+      
       </div>
     );
   }
