@@ -18,7 +18,7 @@
 
 ## Usage
 
-This is React-based Google Books Search app. It was created for people who would like to search for books. Also this application allows  users to save choosen books and buy them.
+This is MERN application that is called Google Books Search app. It was created for people who would like to search for books. Also this application allows  users to save choosen books and buy them.
 
   This app was created using  React components,  helper/util functions, and utilized React lifecycle methods to query and display books based on user searches. Also  Node, Express and MongoDB were used so that users can save books to review or purchase later.
 
