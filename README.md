@@ -1,13 +1,8 @@
 # Google Books Search
 
-
-
-
-
-![badmath](https://img.shields.io/badge/REACT-portfolio-blue)
+![badmath](https://img.shields.io/badge/Books-search-yellow)
 
 ![Contributor Covenant](https://img.shields.io/badge/license-MIT-brightgreen)
-
 
 ## Table of Contents
 
@@ -32,9 +27,9 @@ This is React-based Google Books Search app. It was created for people who would
 
 
 
-!["Search" page](src/components/images/about.png)
+!["Search" page](client/src/images/homePage.png)
 
-!["SavedBooks" page](src/components/images/portfolio.png)
+!["SavedBooks" page](client/src/images/savedPage.png)
 
 
 ## Credits
@@ -62,7 +57,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
- <!-- ## Contributing
-
-If you would like to contribute to this project, please follow the [Contributor Covenant](https://www.contributor-covenant.org/) guidelines.  -->
