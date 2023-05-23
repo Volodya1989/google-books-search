@@ -23,8 +23,8 @@ This is MERN application that is called Google Books Search app. It was created 
   This app was created using  React components,  helper/util functions, and utilized React lifecycle methods to query and display books based on user searches. Also  Node, Express and MongoDB were used so that users can save books to review or purchase later.
 
 
-[ Link to the Deployed Google Books Search App](https://google-boks-search.herokuapp.com/)
-
+<!-- [ Link to the Deployed Google Books Search App](https://google-boks-search.herokuapp.com/)
+ -->
 
 
 !["Search" page](client/src/images/homePage.png)
